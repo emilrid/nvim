@@ -38,7 +38,7 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "Open a new tab" })
 
 
 -- Configure Oil
-require("Oil").setup({
+require("oil").setup({
 	view_options = {
 		show_hidden = true,
 	},
