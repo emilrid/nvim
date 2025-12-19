@@ -1,0 +1,15 @@
+[submodule "pack/clones/start/gruvbox"]
+	path = pack/clones/start/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule "pack/clones/start/nvim-lspconfig"]
+	path = pack/clones/start/nvim-lspconfig
+	url = git@github.com:neovim/nvim-lspconfig.git
+[submodule "pack/clones/start/oil.nvim"]
+	path = pack/clones/start/oil.nvim
+	url = git@github.com:stevearc/oil.nvim.git
+[submodule "pack/clones/start/plenary.nvim"]
+	path = pack/clones/start/plenary.nvim
+	url = git@github.com:nvim-lua/plenary.nvim.git
+[submodule "pack/clones/start/telescope.nvim"]
+	path = pack/clones/start/telescope.nvim
+	url = git@github.com:nvim-telescope/telescope.nvim.git
