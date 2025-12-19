@@ -1,4 +1,4 @@
--- My very own neovim config - Emil Ridulfo
+-- Minimal neovim config
 
 -- Relative line numbers
 vim.o.number = true
