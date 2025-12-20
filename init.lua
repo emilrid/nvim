@@ -19,6 +19,9 @@ vim.o.signcolumn = "number"
 -- Remove highlighting after search
 vim.o.hlsearch = false
 
+-- Tab size 2 spaces
+vim.o.shiftwidth = 2
+
 -- Enable zsh as default shell
 vim.opt.shell = vim.fn.executable("zsh") == 1 and vim.fn.exepath("zsh") or "/bin/sh"
 
