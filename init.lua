@@ -39,6 +39,8 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 -- Open a new tab by pressing leader, t, n 
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "Open a new tab" })
 
+-- Don't yank text that you replace
+vim.keymap.set("v", "p", '"_dP', opts)
 
 -- Configure Oil
 require("oil").setup({
