@@ -36,7 +36,7 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 -- Exit the termianl by pressing Esc
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
--- Open a new tab by pressing leader, t, n 
+-- Open a new tab by pressing leader, t, n
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "Open a new tab" })
 
 -- Don't yank text that you replace
@@ -91,8 +91,7 @@ vim.lsp.config("lua_ls", {
 	}
 })
 
-vim.lsp.enable({ "lua_ls", "clangd", "nil_ls", "pyright", "cmake" })
-
+vim.lsp.enable({ "lua_ls", "clangd", "nil_ls", "pyright", "cmake", "rust_analyzer" })
 
 -- LSP keymaps
 vim.api.nvim_create_autocmd('LspAttach', {
