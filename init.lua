@@ -42,6 +42,11 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "Open a new tab" })
 -- Don't yank text that you replace
 vim.keymap.set("v", "p", '"_dP', opts)
 
+-- Open Neogit with gg
+vim.keymap.set("n", "<leader>gg", function()
+	require("neogit").open({ kind = "tab" })
+end, { desc = "Open Neogit UI in new tab" })
+
 -- Configure Oil
 require("oil").setup({
 	view_options = {

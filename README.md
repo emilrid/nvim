@@ -19,13 +19,15 @@ git submodule update --init
 - Yanked text is copied to clipboard.
 - Shell is zsh.
 - Colorscheme is gruvbox.
-- Shiftwidth is 2 by default
+- Shiftwidth is 2 by default.
+- Yanked text is not replaced.
 - `<leader>` is space.
 
 - `<leader>O` opens current directory with oil.nvim.
 - `<leader>q` shows diagnostics.
 - `<leader>tn` opens a new tab.
 - `<leader>f` formats file with LSP.
+- `<leader>gg` opens Neogit in new tab.
 
 - `<leader>sh` searches help.
 - `<leader>sk` searches keybindings.
