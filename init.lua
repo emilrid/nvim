@@ -40,7 +40,7 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "Open a new tab" })
 
 -- Don't yank text that you replace
-vim.keymap.set("v", "p", '"_dP', opts)
+vim.keymap.set("v", "p", '"_dP')
 
 -- Open Neogit with gg
 vim.keymap.set("n", "<leader>gg", function()
