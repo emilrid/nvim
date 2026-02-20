@@ -16,3 +16,6 @@
 [submodule "pack/clones/start/neogit"]
 	path = pack/clones/start/neogit
 	url = https://github.com/NeogitOrg/neogit.git
+[submodule "pack/clones/start/gitsigns.nvim"]
+	path = pack/clones/start/gitsigns.nvim
+	url = https://github.com/lewis6991/gitsigns.nvim.git
