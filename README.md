@@ -27,7 +27,6 @@ git submodule update --init
 - `<leader>q` shows diagnostics.
 - `<leader>tn` opens a new tab.
 - `<leader>f` formats file with LSP.
-- `<leader>gg` opens Neogit in new tab.
 
 - `<leader>sh` searches help.
 - `<leader>sk` searches keybindings.
