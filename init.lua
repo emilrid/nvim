@@ -22,6 +22,9 @@ vim.o.hlsearch = false
 -- Tab size 2 spaces
 vim.o.shiftwidth = 2
 
+-- Enable color column
+vim.o.colorcolumn = "80"
+
 -- Enable zsh as default shell
 vim.opt.shell = vim.fn.executable("zsh") == 1 and vim.fn.exepath("zsh") or "/bin/sh"
 
@@ -41,6 +44,21 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "Open a new tab" })
 
 -- Don't yank text that you replace
 vim.keymap.set("v", "p", '"_dP')
+
+-- Keymap for journaling
+vim.keymap.set("n", "<leader>j", function()
+	if vim.opt_local.linebreak:get() then
+		-- turn off
+		vim.opt_local.linebreak = false
+		vim.opt_local.formatoptions:remove("a")
+		print("Journal mode OFF")
+	else
+		-- turn on
+		vim.opt_local.linebreak = true
+		vim.opt_local.formatoptions:append("a")
+		print("Journal mode ON")
+	end
+end, { desc = "Toggle journal mode" })
 
 -- Configure Oil
 require("oil").setup({

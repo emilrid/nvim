@@ -27,6 +27,7 @@ git submodule update --init
 - `<leader>q` shows diagnostics.
 - `<leader>tn` opens a new tab.
 - `<leader>f` formats file with LSP.
+- `<leader>j` journaling mode (automatic wrapping)
 
 - `<leader>sh` searches help.
 - `<leader>sk` searches keybindings.
