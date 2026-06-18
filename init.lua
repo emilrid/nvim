@@ -50,12 +50,14 @@ vim.keymap.set("n", "<leader>j", function()
 	if vim.opt_local.linebreak:get() then
 		-- turn off
 		vim.opt_local.linebreak = false
-		vim.opt_local.formatoptions:remove("a")
+		vim.opt_local.textwidth = 0
+		vim.opt_local.formatoptions:remove("t")
 		print("Journal mode OFF")
 	else
 		-- turn on
 		vim.opt_local.linebreak = true
-		vim.opt_local.formatoptions:append("a")
+		vim.opt_local.textwidth = 80
+		vim.opt_local.formatoptions:append("t")
 		print("Journal mode ON")
 	end
 end, { desc = "Toggle journal mode" })
