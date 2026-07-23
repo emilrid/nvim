@@ -111,7 +111,13 @@ vim.lsp.config("lua_ls", {
 	}
 })
 
-vim.lsp.enable({ "lua_ls", "clangd", "nil_ls", "pyright", "cmake", "rust_analyzer" })
+vim.filetype.add({
+  extension = {
+    spade = "spade",
+  },
+})
+
+vim.lsp.enable({ "lua_ls", "clangd", "nil_ls", "pyright", "cmake", "rust_analyzer", "spade_ls" })
 
 -- LSP keymaps
 vim.api.nvim_create_autocmd('LspAttach', {
