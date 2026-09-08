@@ -45,22 +45,28 @@ vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "Open a new tab" })
 -- Don't yank text that you replace
 vim.keymap.set("v", "p", '"_dP')
 
--- Keymap for journaling
-vim.keymap.set("n", "<leader>j", function()
-	if vim.opt_local.linebreak:get() then
-		-- turn off
-		vim.opt_local.linebreak = false
-		vim.opt_local.textwidth = 0
-		vim.opt_local.formatoptions:remove("t")
-		print("Journal mode OFF")
-	else
-		-- turn on
-		vim.opt_local.linebreak = true
-		vim.opt_local.textwidth = 80
-		vim.opt_local.formatoptions:append("t")
-		print("Journal mode ON")
-	end
-end, { desc = "Toggle journal mode" })
+-- Writing settings for markdown
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function(args)
+
+    -- Cleaner for writing
+    vim.opt_local.linebreak = true
+    vim.opt_local.breakindent = true
+    vim.opt_local.colorcolumn = ""
+
+    -- Spelling
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = "en,sv"
+
+    -- Lets navigation happen on wrapped lines
+    for _, k in ipairs({ "j", "k", "$", "0", "^" }) do
+      vim.keymap.set({ "n", "x" }, k, function()
+        return (k:match("[%$0%^]") or vim.v.count == 0) and ("g" .. k) or k
+      end, { buffer = args.buf, expr = true, silent = true })
+    end
+  end,
+})
 
 -- Configure Oil
 require("oil").setup({
