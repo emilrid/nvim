@@ -47,7 +47,7 @@ vim.keymap.set("v", "p", '"_dP')
 
 -- Writing settings for markdown
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
+  pattern = {"markdown", "typst"},
   callback = function(args)
 
     -- Cleaner for writing
